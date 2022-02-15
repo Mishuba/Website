@@ -9,24 +9,24 @@ session_start();
             </title>
             <link rel="stylesheet" href="style.css">
         </head>
-        <body onload=" ">
+        <body onload="">
             <header>
-                <?php require 'IsThisIt/Header.php'?>
+                <?php require './IsThisIt/Header.php';?>
             </header>
 
                 <nav id="Navigation">             
-                    <?php require 'NavigationBar.php'?>
+                    <?php require './IsThisIt/NavigationBar.php';?>
                 </nav>
 
 <section id="News">
-    <?php require 'NewUpdates.php'?>
+    <?php require './IsThisIt/NewUpdates.php';?>
 </section>
 
                     <section id="TsunamiFlowInformation">
-                        <?php require 'Community.php'?>
+                        <?php require './IsThisit/Community.php'?>
                     </section>
                     <section id="TsunamiFlowStyle"> 
-                        <?php require 'BottomBar.php'?>
+                        <?php require './IsThisIt/BottomBar.php';?>
                     </section>
 
                     <section id="MainSection">
@@ -109,9 +109,9 @@ session_start();
                     
                     <footer>
                         <!-- you can put the php in a tag for css styling later. -->
-                        <?php require 'Footer.php';?>
+                        <?php require './IsThisIt/Footer.php';?>
                             <!-- you have to use either the top one or the bottom one to input php files into html files.-->
-                        <?php require 'Footer.php'?>
+                       
                     
                     </footer>
                 <script src="JavaScript/jquery.js"></script>
