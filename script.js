@@ -616,7 +616,41 @@ let nav = document.getElementById('Navigation');
 //Business info (The footer one) ticker in the footer.
 
 
-/* The game homepage game javascript code here */
+// JavaScript Game code here
+
+//Home page game (needs to fixed)
+//Part 1 
+var MishubaHomeGame = document.getElementById("MishubaHomeGame");
+var block = document.getElementById("block");
+
+//Part 2
+function jump(){
+    if(MishubaHomeGame.classList != "animate") {
+    MishubaHomeGame.classList.add("animate");
+    }
+    setTimeout(function(){
+        MishubaHomeGame.classList.remove("animate");
+    },500);
+}
+
+//Part 3
+//fix the numbers in this section so that the game works.
+var checkDead = setInterval(function(){
+    var MishubaHomeGameTop =
+    parseInt(window.getComputedStyle(MishubaHomeGame).getPropertyValue("top"));
+    var blockLeft =
+    parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+    if(blockLeft<94 && blockleft>100 && MishubaHomeGameTop >= 40) {
+        block.style.animation = "none";
+        block.style.display = "none";
+        alert("you lose.");
+    }
+},10);
+//End of the javascript HomePageGame
+
+
+//Javascript gamecode ends here
+
 
 //footer section
 
