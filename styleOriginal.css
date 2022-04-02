@@ -1,24 +1,23 @@
 html, body {
     font-family:Helvetica, Arial, sans-serif;
-    
+}
+
+body {
+    margin: 0%;
+            padding: 0;
+                content: 100;
       }
-html, body {
-        Margin: 0;
-        Border: 0;
-        Padding: 0;
-        Content: 100%;
-    }
+
 header {
                             top:0;
                             left:0;
                                 width: 100%;
-                                height: 40%;
+                                height: 10%;
                                         overflow:auto;
-                                            background: blanchedalmond;
-        }
+                                            background:brown;
+}
 
 #Navigation {
-
     position: relative;
         top:0;
         left:0;
@@ -26,7 +25,6 @@ header {
                 clear:none;
                     overflow:hidden;
                         background:pink;
-
 }
 
 #News {
@@ -114,10 +112,6 @@ footer {
                                     overflow: hidden;
         }
 
-#ummm {
-    height: 4%;
-    width: 25%;
-}
 
 #TsunamiNews {
         position: relative;
@@ -137,6 +131,7 @@ footer {
     padding: 0px; 
     list-style-type: none;
     box-shadow: 0px 0px 5px greenyellow;
+
 }
 
 .BizzTicker{
@@ -185,7 +180,7 @@ footer {
         .animate{
             animation: jump 500ms;
         }
-            @keyframes jump{ /* fix jump animation its not qworking properly*/
+            @keyframes jump{
                     0%{top: 50.33%}
                     30%{top: 70%}
                     70%{top: 70%}

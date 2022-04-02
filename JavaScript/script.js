@@ -1,156 +1,7 @@
-//  AJAX uses a combination of :
-/* 
-    - A browser built-in XMLHttpRequest object (to request data from a web server)
-    - JavaScript and HTML DOM (to display or use the data)
-
-AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes.
-    - This makes it possible to update a webpage without reloading the whole page.
-
-HOW AJAX Works
-
-    1.) An event occurs in a webpage (the pager is loaded, a button is clicked)
-    2.) An XMLHttpRequest object is created byh JavaScript
-    3.) The XMLHttpRequest object saends a request to a web server
-    4.) The server processes the request.
-    5.) The server sends a response back to the web page.
-    6.) The response is read by JavaScript
-    7.) Proper action (like page update) is performed by JavaScript
-
-Modern Browser (Fetch API)
-    -Modern Browsers can use Fetch API instead of the XMLHttpRequest Object.
-    -The Fetch API interface allows web browser to make HTTP request to web servers. 
-    If you use the XMLHttpRequest Object, Fetch can do the same in a simpler way.
-
-
-The keystone of AJAX is the XMLHttpRequest object.
-    1. Create an XMLHttpRequest object
-    2. Define a callback function
-    3. Open the XMLHttpRequest object
-    4. Send a Request to a server
-
-The XMLHttpRequest object can be used to exchange data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.
-
-the Syntax for creating an XMLHttpRequest object:
-    variable = new XMLHttpRequest();
-
-Define a Callback Function
-    A callback function is a function passed as a parameter to another function.
-
-    xhttp.onload = function() {
-        // What to do when the response is ready
-    }
-
-Send a Request
-    to send a request to a server, you can use the open() and send() methods of the XMLHttpRequest object:
-
-    xhttp.open("GET", "ajax_info.txt");
-    xhttp.send();
-
-        example
-            (Create an XMLHttpRequest object)
-            const xhttp = new XMLHttpRequest();
-            
-            (Define a callback function)
-            xhttp.onload = function() {
-
-            }
-
-            (send a request)
-            xhttp.open("GET", "ajax_info.txt");
-            xhttp.send();
-
-Access Across Domains
-    For security reasons, modern browsers do not allow access across domains.
-    This means that both the web page and the XML file it tries to load, must be located on the same server.
-    The examples on W3Schools all open XML files located on the W3Schools domain.
-    If you want to use the example above on one of your own web pages, the XML files you load must be located on your own server.
-
-XMLHttpRequest Object Methods
-
-- Method                                - Description
-new XMLHttpRequest()                    Creates a new XMLHttpRequest object
-abort()                                 Cancels the current request
-getAllResponseHeaders()                 Returns header information
-getResponseHeader()                     Returns specific header information
-open(method, url, async, user, psw)     Specifies the request.   method: the request type GET or POST. url: the file location. async: true (asynchronous) or false (synchronous). user: optional user name. psw: optional password.
-send()                                  Sends the request to the server. Used for GET requests
-send(string)                            Sends the request to the server. Used for POST requests
-setRequestHeader()                      Adds a label/value pair to the header to be sent
-
-SMLHttpRequest Object Properties
-- Property                              - Description
-onload                                  Defines a function to be called when the request is recieved (loaded)
-onreadystatechange                      Defines a function to be called when the readyState property changes
-readyState                              Holds the status of the XMLHttpRequest.  0: request not initialized. 1: server connection established. 3: request received. 4: request finished and repsonse is ready.
-responseText                            Returns the response data as a string.
-responseXML                             Returns the response data as XML data
-status                                  Returns the status-number of a request. 200: "OK". 403: "Forbidden". 404: "Not Found". (check your notebook your wrote these down already).
-statusText                              Returns the status-text (e.g. "OK" or "Not Found").
-
-The onload Property
-- With the XMLHttpRequest object you can define a callback function to be executed when the request receives an answer.
-    * The function is defined in the onload property of the XMLHttpRequest object:
-
-Multiple Callback Functions
-- If you have more than one AJAX task in a website, you should create one function for executing the XMLHttpRequest object, and one callback function for each AJAX task.
-    - The function call should contain the URL and what function to call when the response is ready.
-
-The onreadystatechange Property
--The readyState property holds the status of the XMLHttpRequest.
--The onreadystatechange property defines a callback function to be executed when the readyState changes.
--The status property and the statusText properties hold the status of the XMLHttpRequest object.
--The onreadystatechange function is called every time the readyState changes.
--When readyState is 4 and status is 200, the response is ready:
-
-XMLHttpRequest
--The XMLHttpRequest object is used to request data from a server.
-
-Send a Request To a Server
-- To send a request to a server, we use the open() and send() methods of the XMLHttpRequest object:
-    Method                      Description
-    open(method, url, aysnc)    Specifies the type of request. method: the type of request: GET or POST. url: the server (file) location. async: true (asynchronous) or false (synchronous)
-    send()                      Sends the request to the server (used for GET)
-    send(string)                Sends the request to the server (used for POST)
-
-The url - A File On a Server
-- The url parameter of the open() method, is an address toa file on aserver:
-    The file can be any kind of file or server scripting file (which can perform actions on the server before sending the reponse back).
-
-Asynchoronous - True or False?
-- Server requests should be sent asynchronously.
-    * The async parameter of the open() method should be set to true:
-            xhttp.open("GET", "filelink.txt", true);
-    * By sending asynchronously, the JavaScript does not have to wait for the server response, but can instead:
-        # execute other scripts while waitinf for server response
-        # deal with the response after the response is ready
-The default value for the async parameter is async = true.
-
-AJAX - Server Response
--Server Response Properties
-    Property                Description
-    responseText            get the response data as a string
-    responseXML             get the response data as XML data
-
-The responseTextProperty
-    The responseText property returns the server response as a JavaScript string, and you can use it accordingly:
-
-The responseXML property
-    The XMLHttpRequest object has an in-built XML parser.
-    The responseXML property returns the server response as an XML DOM object.
-    Using this property you can parse the response as an XML DOM object:
-
-The getAllResponseHeaders() Method
-    The getAllResponseHeaders() method returns all header information from the server response.
-
-The getResponseHeader() Method
-    The getResponseHeader() method returns specific header information from the server response.
-
-*/
-
 //function
 /*
 javascript function definitions do not specify data types for parameters
-Javascript functions do not perform type chekcing on the passed arguments.
+Javascript functions do not perform type checking on the passed arguments.
 Javascript functions do not check the number of arguments received.
 If a function is called with missing arguments (less than declared), the missing values are set to undefined.
 
@@ -170,7 +21,11 @@ The argument object contains an array of the arguments used when the function wa
 
 
 research
+
+//    call() notes below
 call()
+//call() notes end here.
+
 apply()
 use this with javascript functions.
 
@@ -704,4 +559,151 @@ function checkout()
 }
 // end of the shopping cart section
 
+//  AJAX uses a combination of :
+/* 
+    - A browser built-in XMLHttpRequest object (to request data from a web server)
+    - JavaScript and HTML DOM (to display or use the data)
 
+AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes.
+    - This makes it possible to update a webpage without reloading the whole page.
+
+HOW AJAX Works
+
+    1.) An event occurs in a webpage (the pager is loaded, a button is clicked)
+    2.) An XMLHttpRequest object is created byh JavaScript
+    3.) The XMLHttpRequest object saends a request to a web server
+    4.) The server processes the request.
+    5.) The server sends a response back to the web page.
+    6.) The response is read by JavaScript
+    7.) Proper action (like page update) is performed by JavaScript
+
+Modern Browser (Fetch API)
+    -Modern Browsers can use Fetch API instead of the XMLHttpRequest Object.
+    -The Fetch API interface allows web browser to make HTTP request to web servers. 
+    If you use the XMLHttpRequest Object, Fetch can do the same in a simpler way.
+
+
+The keystone of AJAX is the XMLHttpRequest object.
+    1. Create an XMLHttpRequest object
+    2. Define a callback function
+    3. Open the XMLHttpRequest object
+    4. Send a Request to a server
+
+The XMLHttpRequest object can be used to exchange data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.
+
+the Syntax for creating an XMLHttpRequest object:
+    variable = new XMLHttpRequest();
+
+Define a Callback Function
+    A callback function is a function passed as a parameter to another function.
+
+    xhttp.onload = function() {
+        // What to do when the response is ready
+    }
+
+Send a Request
+    to send a request to a server, you can use the open() and send() methods of the XMLHttpRequest object:
+
+    xhttp.open("GET", "ajax_info.txt");
+    xhttp.send();
+
+        example
+            (Create an XMLHttpRequest object)
+            const xhttp = new XMLHttpRequest();
+            
+            (Define a callback function)
+            xhttp.onload = function() {
+
+            }
+
+            (send a request)
+            xhttp.open("GET", "ajax_info.txt");
+            xhttp.send();
+
+Access Across Domains
+    For security reasons, modern browsers do not allow access across domains.
+    This means that both the web page and the XML file it tries to load, must be located on the same server.
+    The examples on W3Schools all open XML files located on the W3Schools domain.
+    If you want to use the example above on one of your own web pages, the XML files you load must be located on your own server.
+
+XMLHttpRequest Object Methods
+
+- Method                                - Description
+new XMLHttpRequest()                    Creates a new XMLHttpRequest object
+abort()                                 Cancels the current request
+getAllResponseHeaders()                 Returns header information
+getResponseHeader()                     Returns specific header information
+open(method, url, async, user, psw)     Specifies the request.   method: the request type GET or POST. url: the file location. async: true (asynchronous) or false (synchronous). user: optional user name. psw: optional password.
+send()                                  Sends the request to the server. Used for GET requests
+send(string)                            Sends the request to the server. Used for POST requests
+setRequestHeader()                      Adds a label/value pair to the header to be sent
+
+SMLHttpRequest Object Properties
+- Property                              - Description
+onload                                  Defines a function to be called when the request is recieved (loaded)
+onreadystatechange                      Defines a function to be called when the readyState property changes
+readyState                              Holds the status of the XMLHttpRequest.  0: request not initialized. 1: server connection established. 3: request received. 4: request finished and repsonse is ready.
+responseText                            Returns the response data as a string.
+responseXML                             Returns the response data as XML data
+status                                  Returns the status-number of a request. 200: "OK". 403: "Forbidden". 404: "Not Found". (check your notebook your wrote these down already).
+statusText                              Returns the status-text (e.g. "OK" or "Not Found").
+
+The onload Property
+- With the XMLHttpRequest object you can define a callback function to be executed when the request receives an answer.
+    * The function is defined in the onload property of the XMLHttpRequest object:
+
+Multiple Callback Functions
+- If you have more than one AJAX task in a website, you should create one function for executing the XMLHttpRequest object, and one callback function for each AJAX task.
+    - The function call should contain the URL and what function to call when the response is ready.
+
+The onreadystatechange Property
+-The readyState property holds the status of the XMLHttpRequest.
+-The onreadystatechange property defines a callback function to be executed when the readyState changes.
+-The status property and the statusText properties hold the status of the XMLHttpRequest object.
+-The onreadystatechange function is called every time the readyState changes.
+-When readyState is 4 and status is 200, the response is ready:
+
+XMLHttpRequest
+-The XMLHttpRequest object is used to request data from a server.
+
+Send a Request To a Server
+- To send a request to a server, we use the open() and send() methods of the XMLHttpRequest object:
+    Method                      Description
+    open(method, url, aysnc)    Specifies the type of request. method: the type of request: GET or POST. url: the server (file) location. async: true (asynchronous) or false (synchronous)
+    send()                      Sends the request to the server (used for GET)
+    send(string)                Sends the request to the server (used for POST)
+
+The url - A File On a Server
+- The url parameter of the open() method, is an address toa file on aserver:
+    The file can be any kind of file or server scripting file (which can perform actions on the server before sending the reponse back).
+
+Asynchoronous - True or False?
+- Server requests should be sent asynchronously.
+    * The async parameter of the open() method should be set to true:
+            xhttp.open("GET", "filelink.txt", true);
+    * By sending asynchronously, the JavaScript does not have to wait for the server response, but can instead:
+        # execute other scripts while waitinf for server response
+        # deal with the response after the response is ready
+The default value for the async parameter is async = true.
+
+AJAX - Server Response
+-Server Response Properties
+    Property                Description
+    responseText            get the response data as a string
+    responseXML             get the response data as XML data
+
+The responseTextProperty
+    The responseText property returns the server response as a JavaScript string, and you can use it accordingly:
+
+The responseXML property
+    The XMLHttpRequest object has an in-built XML parser.
+    The responseXML property returns the server response as an XML DOM object.
+    Using this property you can parse the response as an XML DOM object:
+
+The getAllResponseHeaders() Method
+    The getAllResponseHeaders() method returns all header information from the server response.
+
+The getResponseHeader() Method
+    The getResponseHeader() method returns specific header information from the server response.
+
+*/

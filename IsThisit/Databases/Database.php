@@ -1,8 +1,8 @@
 <?php
 
-$servername = "";
-$username = "";
-$password = "";
+$servername = "fanny.db.elephantsql.com";
+$username = "fgfkcsqm";
+$password = "vFeU7YtUiqoIG-h-kzv-nuISEhVL1N7L";
 
     $conn = new mysqli($servername, $username, $password);
 
@@ -12,6 +12,9 @@ $password = "";
             echo "Connected successfully";
 
         }
+        
 $conn->close();
 mysqli_close($conn);
 $conn = null;
+
+?>

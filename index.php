@@ -1,6 +1,6 @@
 <?php
 session_start();
-?>
+
 <!DOCTYPE html>
     <html>
         <head>
@@ -260,38 +260,34 @@ a;lskjd;laskdgha;lskdgj;laksjdg
                         
                         </span>
 
-                        <span id="MissionStatement">
-                        
+                        <span id="MissionStatement">                        
                             <H2>
                                 Social Media
                             </H2>
-                            
-                            <!-- Change these to images -->
-        
+                                    
                             <button onclick="document.location='https://www.youtube.com/channel/UCqTtVsIfhihGuznFiBMXnlA'">
-                                Youtube
+                                <img src=" " alt="Youtube" width=" " height=" "> 
                             </button>
         
                             <button onclick="document.location='https://www.twitch.tv/mishuba'">
-                                Twitch
+                                <img src=" " alt="Twitch" width=" " height=" ">                             
                             </button>
         
                             <button onclick="document.location='https://www.twitter.com/mishuba'">
-                                Twitter
+                                <img src=" " alt="Twitter" width=" " height=" "> 
                             </button>
         
                             <button onclick="document.location='https://www.instagram.com/mishuba'">
-                                instagram
+                                <img src=" " alt="Instagram" width=" " height=" "> 
                             </button>
         
                             <button onclick="document.location='https://www.facebokk.com/DragoonMishuba'">
-                                Facebook
+                                <img src=" " alt="Facebook" width=" " height=" "> 
                             </button>
         
                             <button onclick="document.location='https://www.patreon.com/mishuba'">
-                                patreon
+                                <img src=" " alt="Patreon" width=" " height=" "> 
                             </button>
-
                         </span>
                     </section>
 
@@ -449,7 +445,7 @@ a;lskjd;laskdgha;lskdgj;laksjdg
                         <div id="TFNP">
 
                         
-                            <span id="businessInfo"></span>
+                            <span id="businessInfo">
                                 <ul id="BizTickerScroll" class="BizzTicker">
                                     <li>
                                         <h>
@@ -485,7 +481,6 @@ a;lskjd;laskdgha;lskdgj;laksjdg
                         </div>
         
                         <div #id="TFA">
-        
                             <h>
                                 Tsunami Flow Awards
                             </h>
@@ -570,9 +565,8 @@ a;lskjd;laskdgha;lskdgj;laksjdg
 
                                                     <label>
                                                         Business Type/Personality 
-                                                            <input type="radio" name="BusinessPersonality" <?php if (isset($BusinessPersonality) && $BusinessPersonality=="ETNJ") echo "checked";?> ETNJ
-                                                            <input type="radio" name="BusinessPersonality" <?php if (isset($BusinessPersonality) && $BusinessPersonality=="TTHL") echo "checked";?> TLKJ
-
+                                                            <input type="radio" name="BusinessPersonality" <?php if (isset($BusinessPersonality) && $BusinessPersonality=="ETNJ") echo "checked";?>> ETNJ
+                                                            <input type="radio" name="BusinessPersonality" <?php if (isset($BusinessPersonality) && $BusinessPersonality=="TTHL") echo "checked";?>> TLKJ
                                                     </label>
                                         
                                                     <label>
@@ -1164,3 +1158,4 @@ a;lskjd;laskdgha;lskdgj;laksjdg
     </html>
 
 </DOCTYPE html>
+?>

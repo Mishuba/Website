@@ -1,8 +1,7 @@
 <?php
 
 echo(
-    "<span id='TsunamiNews'> <h1> Tsunami News </h1>
-        <ul id='NewsTickerScroll' class='NewsTicker'>
+    "
             <li>
                 Mishuba was born at 6 pounds 5 ounces with a length of 20 inches. His head was 12 1/2 inches, chest was 11 1/2 inches on July 11, 1990 at Tallahassee Memorial Regional Medical Center INC. in Tallahassee, FLorida of the United States of America on Planet Earth.
             </li>
@@ -54,6 +53,5 @@ echo(
             <li>
                 Mishuba received his MS in Entertainment Business from Full Sail University in 2020.
             </li>
-        </ul>
-    </span>"
+        "
 );
