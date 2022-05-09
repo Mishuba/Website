@@ -9,6 +9,6 @@ echo (
     . 
     $d2 
     .
-    " days until 4h of July. </h> <p id='MantraPara'> My inner self helps unify beautiful art. </p>"
+    " days until 4h of July. </h> <p> My inner self helps unify beautiful art. </p>"
 );
 ?>

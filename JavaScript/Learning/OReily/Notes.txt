@@ -1,0 +1,13 @@
+jQuery
+React
+
+Node.js 
+   -npm
+
+MongoDB
+
+React Native
+Native Script
+
+Electron
+
