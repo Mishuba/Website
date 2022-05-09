@@ -1,84 +1,96 @@
-html, body {
+html {
     font-family:Helvetica, Arial, sans-serif;
-    
       }
-html, body {
-        Margin: 0;
-        Border: 0;
-        Padding: 0;
-        Content: 100%;
-    }
+
+body {
+    margin: 0%;
+        padding: 0;
+            border: 0;
+                content: 100%;
+          }
+
 header {
-                            top:0;
-                            left:0;
-                                width: 100%;
-                                height: 40%;
-                                        overflow:auto;
-                                            background: blanchedalmond;
+    top: 0;
+        left: 0;
+            position: absolute;
+                width: 100%;
+                    height: 15%;
+                        float:inline-end;
+                            clear: none;
+                                overflow: hidden;
+                                    background:whitesmoke;
         }
 
 #Navigation {
-
-    position: relative;
-        top:0;
-        left:0;
-            float:none;
-                clear:none;
-                    overflow:hidden;
-                        background:pink;
-
+    height: 5%;
+        width: 100%;
+            position: absolute;
+                top:15%;
+                    left:0;
+                        float:none;
+                            clear:none;
+                                overflow:hidden;
+                                    background: white;
 }
 
 #News {
-    width:12%;
-    height:100%;
-    margin: 0 auto;
-        position:absolute;
-            left:0;
-                float:none;
-                    clear:none;
-                        overflow:hidden;
-                            background:blue;
+    width: 12%;
+        height: 70%;
+            position: absolute;
+                left: 0%;
+                    top: 20%;
+                        float: inline-start;
+                            clear: none;
+                                overflow: inherit;
+                                    background:blue;
+                                        text-align: center;                            
                             text-align: center;
-                            
+                                        text-align: center;                            
+                            text-align: center;
+                                        text-align: center;                            
 }
 
 #MainSection {
-    width: 73%;
-    height: 74%; 
-    position: absolute;
-        left: 12%;
-            overflow: auto;
-                background:red;
+    width: 76%;
+        height: 70%; 
+            position: absolute;
+                left: 12%;
+                    top: 20%;
+                        float: inline-start;
+                            clear: none;
+                                overflow: auto;
+                                    background:red;
 }
 
 #TsunamiFlowInformation {
-    width:15%;
-    height:100%;
-        position: absolute;
-            right:0;
-                float:right;
-                    clear:none;
-                        overflow:inherit;
-                            background:green;
+    width:12%;
+        height:70%;
+            position: absolute;
+                top: 20%;
+                    right:0;
+                        float:inline-start;
+                            clear:none;
+                                overflow:inherit;
+                                    background:green;
 }
 
 #TsunamiFlowStyle {
-    margin: 0%;
-    padding: 0;
-    content: 100;
     width: 100%;
-    height: 10%;
-    position: absolute;
-        bottom:0%;
-                overflow:scroll;
-                                            background:rgb(255, 255, 255);
+        height: 9.9%;
+            position: absolute;
+                left: 0;
+                    bottom:0%;
+                        float: inline-start;
+                            clear: none;
+                                overflow:scroll;
+                                    background:rgb(255, 255, 255);
                   }
 
 footer {
     width: 100%;
-    height: 20%;
+    height: 30%;
     position: absolute;
+        left: 0;
         top:100%;
     overflow:scroll;
         background:yellow;
