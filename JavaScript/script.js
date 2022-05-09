@@ -461,7 +461,11 @@ let nav = document.getElementById('Navigation');
 
 // music player section
 
+let musicFolder = '<?=$musicTest?>';
 
+let musicFolder2 = '<?=$musicFolder?>';
+
+addEventListener = 
 
 // end of music player section
 
