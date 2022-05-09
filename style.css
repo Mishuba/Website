@@ -1,0 +1,308 @@
+html {
+    font-family:Helvetica, Arial, sans-serif;
+      }
+
+body {
+    margin: 0%;
+        padding: 0;
+            border: 0;
+                content: 100%;
+          }
+
+header {
+    top: 0;
+        left: 0;
+            position: absolute;
+                width: 100%;
+                    height: 15%;
+                        float:inline-end;
+                            clear: none;
+                                overflow: hidden;
+                                    background:whitesmoke;
+        }
+
+#Navigation {
+    height: 5%;
+        width: 100%;
+            position: absolute;
+                top:15%;
+                    left:0;
+                        float:none;
+                            clear:none;
+                                overflow:hidden;
+                                    background: white;
+}
+
+#News {
+    width: 12%;
+        height: 70%;
+            position: absolute;
+                left: 0%;
+                    top: 20%;
+                        float: inline-start;
+                            clear: none;
+                                overflow: inherit;
+                                    background:blue;
+                                        text-align: center;                            
+                            text-align: center;
+                                        text-align: center;                            
+                            text-align: center;
+                                        text-align: center;                            
+}
+
+#MainSection {
+    width: 76%;
+        height: 70%; 
+            position: absolute;
+                left: 12%;
+                    top: 20%;
+                        float: inline-start;
+                            clear: none;
+                                overflow: auto;
+                                    background:red;
+}
+
+#TsunamiFlowInformation {
+    width:12%;
+        height:70%;
+            position: absolute;
+                top: 20%;
+                    right:0;
+                        float:inline-start;
+                            clear:none;
+                                overflow:inherit;
+                                    background:green;
+}
+
+#TsunamiFlowStyle {
+    width: 100%;
+        height: 9.9%;
+            position: absolute;
+                left: 0;
+                    bottom:0%;
+<<<<<<< HEAD
+=======
+                        float: inline-start;
+                            clear: none;
+>>>>>>> 5d38dbd9f5d5120be87337cbb1470dbd8ee44196
+                                overflow:scroll;
+                                    background:rgb(255, 255, 255);
+                  }
+
+footer {
+    width: 100%;
+    height: 30%;
+    position: absolute;
+        left: 0;
+        top:100%;
+    overflow:scroll;
+        background:yellow;
+}
+
+#Motto {
+    width: 30%;
+    height:90%;
+        position: absolute;
+            left: 0%;
+            top: 0%;
+}
+
+#Tycadome {
+                    width: 100%;
+                    height:100%;
+                        position: absolute;
+                            left: 35%;
+                            top: 0%;
+
+        }
+
+#Mantra {
+                    width:35%;
+                    height:90%;
+                        position: absolute;
+                            left: 80%;
+                            top: 0%;
+
+        }
+
+#ummm {
+    height: 10%;
+    width: 10%;
+}
+
+#TsunamiNews {
+        position: relative;
+            top:0;
+            left:0;
+                        overflow:hidden;
+
+}
+
+/* this is for the actual news updates */
+.NewsTicker {
+    width: 98%;
+    height: 45%;
+    overflow: hidden;
+    border: 1px solid whitesmoke;
+    margin: 0px;
+    padding: 0px; 
+    list-style-type: none;
+    box-shadow: 0px 0px 5px greenyellow;
+}
+
+.BizzTicker{
+    width: 100%;
+    height: 95%;
+    overflow: hidden;
+    border: 1px solid black;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    box-shadow: 0px 0px 5px white;
+}
+
+.Ticker li {
+    height: 20%;
+    border-bottom: 1px dotted black;
+    padding: 5 px;
+    margin: 0px 5px;
+    text-align: center;
+}
+
+
+
+/* this is the end of the stuff for the actual news updates. */
+
+#IntroVideo {
+    width:auto;
+    height:auto;     
+            }      
+
+    /* Mishuba game sectin starts here. I will space it out like tabs */
+#HomeGame {
+    width: 93%;
+    height: 30%;
+    border: 1px solid black;
+}
+
+        /*The character and its animation*/
+    #MishubaHomeGame{
+        width: 6%;
+        height: 30%;
+        position: relative;
+        top: 70%;
+        
+    }
+        .animate{
+            animation: jump 500ms;
+        }
+            @keyframes jump{ /* fix jump animation its not qworking properly*/
+                    0%{top: 50.33%}
+                    30%{top: 70%}
+                    70%{top: 70%}
+                    100%{top: 50.33%;}
+                }
+
+        /*The block and its animation*/
+    #block {
+        width: 4%;
+        height: 10%;
+        background-color: black;
+        position: relative;
+        top: 60%;
+        left: 96%;
+        animation: block 1s infinite linear;
+    }
+        @keyframes block{
+            0%{left:96%;}
+            100%{left:-12%}
+        }
+
+#TFBio {
+    position: absolute;
+    top:0%;
+    left:0;
+    width:99%;
+    height:99%;
+    border: 1px solid black;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    box-shadow: 0px 0px 5px white;
+        }
+
+#MissionStatement {
+    position: absolute;
+    top:70%;
+    left:0;
+        }
+
+#ExecutiveSummary {
+    position: relative;
+        top:0;
+        left:0;
+            overflow:hidden;
+        }
+
+
+#SomethingList {
+    position: absolute;
+    left:0%;
+    width: 30%;
+    height: 90%;
+    bottom:0%;
+        }
+#TheList {
+    position: absolute;
+    left:30%;
+    bottom: 0%;
+    width:40%;
+    height: 90%;
+    border: 1px solid black;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    box-shadow: 0px 0px 5px white;
+        }
+
+#donation {
+            position: absolute;
+            left:70%;
+            bottom: 0%;
+            width:30%;
+            height:90%;
+}
+
+
+
+#TFNP {
+                        position: relative;
+                        top:0;
+                        left:0;
+        }
+
+#TFA {
+                        position: relative;
+                        top:0;
+                        left:0;
+        }
+
+#QuickLinks {
+                        position: relative;
+                        top:0;
+                        left:0;
+        }
+
+#Subscribe {
+                    position: relative;
+                    top:0;
+                    left:0;
+                    overflow: hidden;
+        }
+
+
+#MusicPlayer {
+                    position:relative;
+                    top:0;
+                    left:0;
+        }
