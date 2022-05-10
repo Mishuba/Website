@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+echo(
 <!DOCTYPE html>
     <html>
         <head>
@@ -48,7 +48,7 @@ session_start();
 
                     </h>
                         <p id="Motto"Para>
-                            "We want to inspire"
+
                         </p>
                 </span>
                 <span id="Tycadome">
@@ -80,7 +80,7 @@ session_start();
                     </h>
 
                         <p id="MantraPara">
-                            "My inner self helps unify beautiful art.""
+                            """
                         </p>
                     </span>
 
@@ -1158,4 +1158,6 @@ a;lskjd;laskdgha;lskdgj;laksjdg
     </html>
 
 </DOCTYPE html>
+
 ?>
+
