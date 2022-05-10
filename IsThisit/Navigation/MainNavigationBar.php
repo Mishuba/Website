@@ -1,6 +1,6 @@
 <?php
 
-echo ("               
+echo ("             
         <table> <thead> </thead> <tbody> <tr> <td>
             <a href='index.html' target='_top' onmouseover='' onmouseout='' onmousedown='' onmouseup='' onclick='' ondblclick=''> Main </a>
         </td> <td>

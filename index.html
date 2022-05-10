@@ -39,7 +39,6 @@ session_start();
                 <span id="Motto">
                     <p>
                         <?php require './IsThisIt/Header/Motto.php';?>
-                       <?php echo("We want to <em>inspire</em>");?>
                     </p>
 
                 </span>
@@ -49,23 +48,37 @@ session_start();
                                         <figure id="headerLogo">
                                             <img id='ummm' src='pictures/Untitled-1.jpg ' alt="Tsunami Flow Logo"; title="";>
                                             <figcaption>
-                                        <!--nothing for now-->                                    
-                                        <figure>
-                                            <img id='ummm' src='pictures/Untitled-1.jpg ' alt=""; title="";>
-                                            <figcaption>
-                                                Test
-                                            </figcaption>
+                                        <!--nothing for now-->   
+                                            </figcaption>                                 
                                         </figure>
                 </span>
 
                 <span id="Mantra">
                 <?php require './IsThisIt/Header/Mantra.php';?>
-                Date Time Year
                 </span>
 
             </header>
 
-            <nav id="Navigation">             
+            <nav id="Navigation">
+                <table> <thead> </thead> <tbody> <tr> <td>
+                    <a href='index.html' target='_top' onmouseover='' onmouseout='' onmousedown='' onmouseup='' onclick='' ondblclick=''> Main </a>
+                </td> <td>
+                    <a href='./Roster/Members.html' target='_self'> Roster </a>
+                </td> <td>
+                    <a href='./Radio/realtime.html' target='_self'> Radio </a>
+                </td> <td>
+                    <a href='./News/NewsTF.html' target='_parent'> News </a>
+                </td> <td>
+                    <a href='./Blog_Vlog_Podcast/HiddenDreamsVillage.html' target='_self'> Blog/Vlog </a>
+                </td> <td>
+                    <a href='./Competition/Competition.html' target='_blank'> Competition </a>
+                </td> <td>
+                    <a href='./Games/Section.html' target='_blank'> Games </a>
+                </td> <td>
+                    <a href='./Community/Login.html' target='_blank'> Community </a>
+                </td> <td>
+                    <a href='./Store/tycadome.html' target='_parent'> Store </a>
+                </td> </tr> </tbody> </table>             
                 <?php require './IsThisit/Navigation/MainNavigationBar.php';?>
             </nav>
 
@@ -225,7 +238,9 @@ deliver self truth, deliver emotional vulnerability,
                         </span>
                     </section>
                     <section id="TsunamiFlowStyle"> 
-                        <span id="SomethingList">
+                        <span id="SomethingList">                            
+                        <audio controls src="./Music/Try To Stop Me Radio Edit.mp3">
+                        </audio>
                             <?php require './IsThisit/MusicPlaylist.php';?>
                         </span>
                         <span id="TheList" class="FactsList">
