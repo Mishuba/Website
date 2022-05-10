@@ -1,6 +1,6 @@
 <?php
 
-$name = $email = $favNumber = $phoneNumber = $website = $hobbies = $ = $ = $ "";
+$name = $email = $favNumber = $phoneNumber = $website = $hobbies = $favColor = $comment = $gender = $LoveLanguage = $LearningStyle = $BusinessPersonality = $DISC = $ChineseZodiacSign = $WesternZodiacSign;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = test_input($_POST["Name"]);
@@ -51,7 +51,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!preg_match("/^[a-zA-Z-; ]*$/",$favColor)) {
             $colorErr = "Only letters and whitespace allowed";
         }
-    $ ;
 
     if (empty($_POST["comment"])) {
         $comment = "";
@@ -107,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $WesternZodiacSign = test_input($_POST["WesternZodiacSign"]);
     }
 
-function = test_input($data) {
+function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
