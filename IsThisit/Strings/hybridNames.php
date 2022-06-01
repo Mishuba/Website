@@ -1,0 +1,5 @@
+<?php
+
+$shu = "Mishuba";
+
+?>

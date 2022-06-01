@@ -10,7 +10,6 @@ $password = "vFeU7YtUiqoIG-h-kzv-nuISEhVL1N7L";
             die("Connection failed: " . $conn->connect_error);
         } else {
             echo "Connected successfully";
-
         }
         
 $conn->close();
