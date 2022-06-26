@@ -462,111 +462,60 @@ let nav = document.getElementById('Navigation');
 // music player section
 
 
-var audioPlayer = document.getElementById("musicPl");
-var userIsSettingProgress = false;
-var duration = audioPlayer.duration;
-var rate = audioPlayer.playbackRate;
-    if(audioPlayer.src=="") {
-        document.getElementById("play").disabled=true;
-    }
+let songList ='<?php echo(json_encode($musicPlaylist));?>';
+let musicMFPL = document.getElementById("currentMusic")
 
-    document.getElementById("volume").addEventListener("input", (event) => {
-        setVolume(event.target);
-    });
+let trackindex = 0;
+musicMFPL.load();
+let isPlaying = false;
+let updateTimer;
 
-    document.getElementById("rate").addEventListener("input", (event)=> {
-        setPlaybackRate(event.target);
-    });
+let NowPlayingMusicIGuess = document.createElement('audio');
 
-    document.getElementById("progress").addEventListener("input", (event) => {
-        userIsSettingProgress= true;
-    });
+function loadTrack(trackindex) {
+    musicMFPL.src = songList[trackindex].path;
+    musicMFPL.load();
+    musicMFPL.addEventListener("ended", nextTrack);
+}
 
-    document.getElementById("progress").addEventListener("change", (event) => {
-        setProgress(event.target);
-        userIsSettingProgress = false;
-    });
-
-    document.getElementById("play").addEventListener("click", (event) => {
-        playOrPause(event.target);
-    });
-
-    document.getElementById("pause").addEventListener("click", (event) => {
-        playOrPause(event.target);
-    });
-
-const setPlaybackRate = (element) => {
-    audioPlayer.playbackRate = element.value;
-};
-
-const updatePlayPauseButton = (element) => {
-    if(audioPlayer.paused) {
-        document.getElementById("play").style.display="inline";
-        document.getElementById("pause").style.display="none";
+function playpauseTrack() {
+    if (!isPlaying) {
+        playpauseTrack();
     } else {
-        document.getElementById("play").style.display="none";
-        document.getElementById("pause").style.display="inline";
+        pauseTrack();
     }
-};
+}
 
-const playOrPause = (element) => {
-    if(audioPlayer.paused) {
-        audioPlayer.play();
+function playTrack() {
+    musicMFPL.play();
+    isPlaying = true;
+}
+
+function pauseTrack() {
+    musicMFPL.pause();
+    isPlaying = false;
+}
+
+function nextTrack() {
+    if (trackindex < songList.length - 1) {
+        trackindex += 1;
+    } else trackindex = 0;
+
+    loadTrack(trackindex);
+    playTrack();
+}
+
+function prevTrack() {
+    if (trackindex > 0) {
+        trackindex -= 1;
     } else {
-        audioPlayer.pause()
+        trackindex = songList.length - 1;
     }
-};
 
-const setProgress = (element) => {
-    if(!isNaN(duration)) {
-        audioPlayer.currentTime = element.value * (duration/100);
-    }
-};
-
-const setVolume = (element) => {
-    audioPlayer.volume = element.value;
-};
-
-const setSource = (filename) => {
-    document.getElementById("play").disabled=false;
-    updatePlayPauseButton(document.getElementById("play"));
-
-    filetype = filename.slice((filename.lastIndexOf(".") - 1 >>> 0) + 2);
-
-    audioPlayer.src="Tycadome\\" + filename;
-    switch(filetype) {
-        case "mp3":
-            audioPlayer.type="audio/mp3"
-            break;
-        case "wav":
-            audioPlayer.type="audio/wav"
-            break;
-    }
-    audioPlayer.playbackRate = document.getElementById("rate").value 
-    audioPlayer.play();
-    document.getElementById("musicText").innerText= "Playing: " + filename;
-};
-
-const updateProgress = () => {
-    if(!userIsSettingProgress) {
-        let time = audioPlayer.currentTime;
-        duration = audioPlayer.duration;
-        if(!isNaN(duration)) {
-            document.getElementById("progress").value = (100/duration) * time;
-        }
-    }
-    updatePlayPauseButton(document.getElementById("play"));
-    updateTime();
-};
-
-const updateTime = () => {
-    if(!isNaN(duration)) {
-        document.getElementById("duration").innerText = Math.floor(duration/60) + ":" + String(Math.floor(duration % 60)).padStart(2, "0");
-    }
-    document.getElementById("time").innerText = Math.floor(audioPlayer.currentTime/60) + ":" + String(Math.floor(audioPlayer.currentTime % 60)).padStart(2, "0");
-};
-
-setInterval(updateProgress, 100);
+    loadTrack(trackindex);
+    playTrack();
+}
+loadTrack(trackindex);
 
 /*
 let musicFolder = '<?=$musicTest?>';

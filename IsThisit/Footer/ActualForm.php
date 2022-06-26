@@ -1,32 +1,32 @@
-<form name="SubberTF" id="TFsubbers" method="post" action="./IsThisit/Footer/SubscribeForm.php" onsubmit="return validateForm()">
+<form name="SubberTF" id="TFsubbers" method="post" action="./IsThisit/Footer/SubscribeForm.php" onsubmit="return validateForm()" onblur="" onchange="" onfocus="" oninput="" oninvalid="" onselect="" onkeydown="" onkeypress="" onkeyup="">
                                     <fieldset>
                                         <legend>
                                             Join the Squad
                                         </legend>    
                                             <label>
                                                 Name:   
-                                                    <INPUT id="NewSubberName" type="text" name="SubName" value="<?php echo $name;?>" size="10" maxlength="100" autocomplete="on" onfocus="" onchange="" required>
+                                                    <INPUT id="NewSubberName" type="text" name="SubName" value="" size="10" maxlength="100" autocomplete="on" onfocus="" onchange="" required>
                                             </label>
 
                                         <br>.
 
                                             <label>
                                                 Email: 
-                                                    <INPUT type="email" name="Email" value="<?php echo $email;?>" size="10" maxlength="100" required>                
+                                                    <INPUT type="email" name="Email" value="" size="10" maxlength="100" required>                
                                             </label>
 
                                             <br>
 
                                             <label>      
                                                 Favorite Number:                             
-                                                <input number value="<?php echo $favNumber;?>" required>
+                                                <input number value="" required>
                                             </label>
                                     
                                             <br>
 
                                             <label>
                                                 Phone Number:          
-                                                    <input type="tel" name="Phone Number" value="<?php echo $phoneNumber;?>" required>
+                                                    <input type="tel" name="Phone Number" value="" required>
                                             </label>
                                     
                                             <!--fix this shit. make it so that when they finish filling out the form it adds what date time and possibly location.
@@ -50,14 +50,10 @@
                                             <label>
                                                 Password:
                                                 <input type="password" size="10" maxlength="1000">
-                                        </label>
+                                            </label>
                             
-                                        <br>
-
-                                        <label>     
-                                            <input type="range">
-                                        </label>
-
+                                        
+                                    <button> submit </button>
                                         </fieldset>
         
                                         <fieldset>
@@ -68,25 +64,25 @@
 
                                                 <label>
                                                     Hobbies
-                                                    <input type="text" name="Hobby" value="<?php echo $hobbies;?>">
+                                                    <input type="text" name="Hobby" value="">
                                                 </label>
         
                                                 <br>
 
                                                 <label> 
                                                 Favorite Color 
-                                                    <INPUT type="color" name="favColor" value="<?php echo $favColor;?>:">
+                                                    <INPUT type="color" name="favColor" value="">
                                                 </label>
         
+                                                
                                                 <br>
-
                                                 <label>
                                                     Personal/Business Website 
-                                                        <INPUT type="url" name="FanWebsite" value="<?php echo $website;?>" size="10" maxlength="300">
+                                                        <INPUT type="url" name="FanWebsite" value="" size="10" maxlength="300">
                                                 </label>
 
+                                                
                                                 <br>
-
                                                 <label>
                                                     Love Language
                                                     <br>
@@ -111,7 +107,7 @@
                                                 </label>
 
                                                 <br>
-
+                                                <br>
                                                 <label>
                                                     Business Type/Personality 
                                                     <br>
@@ -135,9 +131,10 @@
                                                 </label>
 
                                                 <br>
-
+                                                <br>
                                                 <label>
                                                     DISC 
+                                                    <br>
                                                     <input type="radio" name="DISC" <?php if (isset($DISC) && $DISC=="D") echo "checked";?>> Dominance
                                                     <input type="radio" name="DISC" <?php if (isset($DISC) && $DISC=="I") echo "checked";?>> Influence 
                                                     <input type="radio" name="DISC" <?php if (isset($DISC) && $DISC=="S") echo "checked";?>> Steadiness
@@ -145,9 +142,10 @@
                                                 </label>
                                     
                                                 <br>
-
+                                                <br>
                                                 <label>
                                                     Chinese Zodiac Sign
+                                                    <br>
                                                     <input type="radio" name="ChineseZodiacSign" <?php if (isset($ChineseZodiacSign) && $ChineseZodiacSign=="Horse") echo "checked";?>> Horse
                                                     <input type="radio" name="ChineseZodiacSign" <?php if (isset($ChineseZodiacSign) && $ChineseZodiacSign=="Goat") echo "checked";?>> Goat
                                                     <input type="radio" name="ChineseZodiacSign" <?php if (isset($ChineseZodiacSign) && $ChineseZodiacSign=="Monkey") echo "checked";?>> Monkey
@@ -163,9 +161,10 @@
                                                 </label>
 
                                                 <br>
-
+                                                <br>
                                                 <label>
                                                     Western Zodiac Sign
+                                                    <br>
                                                     <input type="radio" name="WesternZodiacSign" <?php if (isset($WesternZodiacSign) && $WesternZodiacSign=="Capricorn") echo "checked";?>> Capricorn
                                                     <input type="radio" name="WesternZodiacSign" <?php if (isset($WesternZodiacSign) && $WesternZodiacSign=="Aquarius") echo "checked";?>> Aquarius
                                                     <input type="radio" name="WesternZodiacSign" <?php if (isset($WesternZodiacSign) && $WesternZodiacSign=="Pisces") echo "checked";?>> Pisces
@@ -182,11 +181,8 @@
                                                 </label>
 
                                                 <br>
-
-                                                <input list="Country">
-                                                <datalist id="CountryIGuess">
-                                                    Country: 
-                                                        <SELECT name="Country">
+                                                <label>Country: </label>
+                                                    <select id="country">
                                                             <OPTION>United States</OPTION>
                                                             <OPTion>Afghanistan</OPTion>
                                                             <OPTION>Aland Islands</OPTION>
@@ -454,15 +450,13 @@
                                                             <OPTION>Yemen</OPTION>
                                                             <OPTION>Zambia</OPTION>
                                                             <OPTION>Zimbabwe</OPTION>
-                                                        </SELECT>
+                                                        </select>
                                                     </datalist>
                                                 
                                                     <br>
-
-                                            <input list="Religion">
-                                            <datalist id="ReligionMaybe">
-                                                Religion:
-                                                <Select name="Religion">
+                                    Religion:
+                                        <input list="Religion">
+                                            <datalist id="Religion">
                                                         <Option> Confucianism </Option>
                                                         <Option> Shinto </Option>
                                                         <Option> Taoism </Option>
@@ -962,12 +956,11 @@
                                                         <OPTION> Subud </Option>
                                                         <OPTION> The Circle of Reason </Option> 
                                                         <OPTION> Allieism </Option>
-                                                         </Select>
-                                            </datalist>  
-                                        </fieldset>
-        
-                                        <br>
-
+                                                </datalist>  
+                                                <button> submit </button> 
+                                            </fieldset>
+                                        
+                                    <br>
                                         <fieldset>
                                             <legend>
                                                 What do you want to tell me.

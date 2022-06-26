@@ -1,5 +1,6 @@
 <?php
 session_start();
+syslog();
 ?>
 <!DOCTYPE html>
 
@@ -10,18 +11,30 @@ session_start();
                 Tycadome
             </title>
             <meta charset="utf-8">
-            <link rel="icon" href="favicon.ico" type="image/x-icon">
+<!--
+            <meta http-equiv="content-security-policy" content="">
+            <meta http-equiv="content-type" content="">
+            <meta http-equiv="default-style" content="">
+            <meta http-equiv="refresh" content="">
+-->
             <meta name="author" content="Mishuba">
+            <meta name="keyword" content="Mishuba, Hip Hop, Rap, Instrumental, Beats, Artist, Musician, ">
             <meta name="description" content="The village of hidden Dreams">
+
+            <meta name="application-name" content="Tycadome">
+            <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+            
             
             <link rel="stylesheet" href="StyleSheet/style.css">
+            <link rel="icon" href="favicon.ico" type="image/x-icon">
+
             <script src="JavaScript/jquery.js" defer></script>
             <script src="JavaScript/script.js" defer></script>
         </head>
 
-        <body>
+        <body onafterprint="" onbeforeprint="" onbeforeunload="" onerror="" onload="" onoffline="" oncopy="" oncut="" onpaste="" onkeydown="" onkeypress="" onkeyup="" ononline="" onpagehide="" onpopstate="" onstorage="" onresize="" onunload="">
 
-            <header id="header">
+            <header id="header" oncopy="" oncut="" onpaste="">
 
                 <span id="Motto">
                     <p>
@@ -35,67 +48,65 @@ session_start();
                 </span>
 
                 <span id="Mantra">
-
                     <?php require './IsThisIt/Header/Mantra.php';?>
-
                 </span>
 
             </header>
 
-            <nav id="Navigation">            
+            <nav id="Navigation" oncopy="" oncut="" onpaste="" onkeydown="" onkeypress="" onkeyup="" onclick="" ondblclick="" onmousedown="" onmousemove="" onmouseout="" onmouseover="" onmouseup="" onwheel="">            
                 <?php require './IsThisit/Navigation/MainNavigationBar.php';?>
             </nav>
 
-<section id="News">
+            <section id="News">
 
-    <span id="TsunamiNews">
-    <H1>
-        Tsunami News
-    </H1>
-    <ul id="NewsTickerScroll" class="NewsTicker">
-    <?php require './IsThisit/NewsLive/NewsUpdates.php';?>
-    </ul>
-    </span>
+                <span id="TsunamiNews" oncopy="" oncut="" onpaste="" onkeydown="" onkeypress="" onkeyup="" onclick="" ondblclick="" onmousedown="" onmousemove="" onmouseout="" onmouseover="" onmouseup="" onwheel="">
+                <H1>
+                    Tsunami News
+                </H1>
+                <ul id="NewsTickerScroll" class="NewsTicker">
+                <?php require './IsThisit/NewsLive/NewsUpdates.php';?>
+                </ul>
+                </span>
 
-    <span id="MissionStatement">
-        <button>
-            <a href="https://www.youtube.com/channel/UCqTtVsIfhihGuznFiBMXnlA" title="head to my personal youtube page">
-            <img src=" " alt="Youtube" width="15%" height="15%"> 
-            </a>
-        </button>
+                <span id="MissionStatement">
+                    <button>
+                        <a href="https://www.youtube.com/channel/UCqTtVsIfhihGuznFiBMXnlA" title="head to my personal youtube page">
+                        <img src=" " alt="Youtube" width="15%" height="15%"> 
+                        </a>
+                    </button>
 
-        <button onclick="document.location='https://www.twitch.tv/mishuba'">
-            <img src=" " alt="Twitch" width="15%" height="15%">                             
-        </button>
+                    <button onclick="document.location='https://www.twitch.tv/mishuba'">
+                        <img src=" " alt="Twitch" width="15%" height="15%">                             
+                    </button>
 
-        <button onclick="document.location='https://www.twitter.com/mishuba_'">
-            <img src=" " alt="Twitter" width="15%" height="15%"> 
-        </button>
+                    <button onclick="document.location='https://www.twitter.com/mishuba_'">
+                        <img src=" " alt="Twitter" width="15%" height="15%"> 
+                    </button>
 
-        <button onclick="document.location='https://www.instagram.com/mishuba'">
-            <img src=" " alt="Instagram" width="15%" height="15%"> 
-        </button>
+                    <button onclick="document.location='https://www.instagram.com/mishuba'">
+                        <img src=" " alt="Instagram" width="15%" height="15%"> 
+                    </button>
 
-        <button onclick="document.location='https://www.facebokk.com/DragoonMishuba'">
-            <img src=" " alt="Facebook" width="15%" height="15%"> 
-        </button>
+                    <button onclick="document.location='https://www.facebokk.com/DragoonMishuba'">
+                        <img src=" " alt="Facebook" width="15%" height="15%"> 
+                    </button>
 
-        <button onclick="document.location='https://www.patreon.com/mishuba'">
-            <img src=" " alt="Patreon" width="15%" height="15"> 
-        </button>                            
-    </span>
+                    <button onclick="document.location='https://www.patreon.com/mishuba'">
+                        <img src=" " alt="Patreon" width="15%" height="15"> 
+                    </button>                            
+                </span>
 
-</section>
+            </section>
 
-                    <section id="TsunamiFlowInformation">
+                    <section id="TsunamiFlowInformation" oncopy="" oncut="" onpaste="" onkeydown="" onkeypress="" onkeyup="" onclick="" ondblclick="" onmousedown="" onmousemove="" onmouseout="" onmouseover="" onmouseup="" onwheel="">
                         <span id="TFBio">
                             <?php require './IsThisit/CommunityLive/Community.php'?>                          
                         </span>
                     </section>
 
-                    <section id="MainSection">
+                    <section id="MainSection" oncopy="" oncut="" onpaste="" onkeydown="" onkeypress="" onkeyup="" onclick="" ondblclick="" onmousedown="" onmousemove="" onmouseout="" onmouseover="" onmouseup="" onwheel="" ondrag="" ondragend="" ondragenter="" ondragleave="" ondragover="" ondragstart="" ondrop="" onscroll="">
                         <div id="IntroVideo"> 
-                            <video source=" " controls atl="Tsunami Flow Intro Video">
+                            <video source=" " controls atl="Tsunami Flow Intro Video" onloadstart="" onprogress="" controls onplay="" ondurationchange="" onratechange="" onemptied="" preload="auto" onloadeddata="" onloadedmetadata="" onstalled="" onduration="" onerror='<script> alert("there is an error with the audio and your computer")</script>' oncanplaythrough="<script> alert('wow, its crazy i feel like you should become a member') </script>" onpause="" onplaying="" onvolumechange="" onwaiting="" onseeking="" ontimeupdate="" onsuspend="" onabort="" onended="">
                                 Intro Video
                             </video>
                         </div>
@@ -204,45 +215,22 @@ session_start();
                         </span>
                     </section>
                     
-                    <section id="TsunamiFlowStyle"> 
+                    <section id="TsunamiFlowStyle" oncopy="" oncut="" onpaste="" onkeydown="" onkeypress="" onkeyup="" onclick="" ondblclick="" onmousedown="" onmousemove="" onmouseout="" onmouseover="" onmouseup="" onwheel="" ondrag="" ondragend="" ondragenter="" ondragleave="" ondragover="" ondragstart="" ondrop="" onscroll=""> 
 
                         <span id="SomethingList">
                             <div id="musicPlaylist" class="musicPl">
-                                    <audio id="currentMusic" class="currentM" controls onerror="" oncanplaythrough="" onpause="" onplaying="" onseeking="" onsuspend="" onabort="" onended="">
-                                        <source src="" type="audio/wav">  <!-- alternate source is this src="<?php print_r("$nowPlayinMusic");?>" -->
-                                    </audio>
-                                    <div id="musicText"> Not playing anything</div>
-                                    <div id="musicControls">
-                                        <div>
-                                            <input type="range" id="volume" name="volume" min="0" max="1" step="0.1" value="1">
-                                             <label for="volume">Volume</label>
-                                        </div>
-                                        <div>
-                                            <input type="range" id="rate" name="rate" min="0.5" max="2" step="0.25" value="1">
-                                            <label for="volume">Speed</label>
-                                        </div>
-                                        <div>
-                                            <input type="range" id="progress" name="progress" min="0" max="100" step="0.1" value="0">
-                                            <label for="volume">Progress</label>
-                                        </div>
-                                        <div>
-                                                <button id="pause">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                                                        <title>
-                                                            pause
-                                                        </title>
-                                                        <rect width="6" height="16" x="3" y="2" rx="1" ry="1"/>
-                                                        <rect width="6" height="16" x="11" y="2" rx="1" ry="1"/>
-                                                    </svg>   
-                                                </button>
-                                                <span id="time"> 0:00</span> / <span id="duration">0:00</span>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                    <div id="playlist" class="playlist">
-                                        <div>Select a file to play</div>
-                                        <?php require './IsThisit/BottomBar/MusicPlaylist.php';?>
-                                    </div>
+                                <?php require "./IsThisit/BottomBar/MusicPlaylist.php";?>
+                                    <audio id="currentMusic" class="currentM" atl="booooo" onloadstart="" onprogress="" controls onplay="" ondurationchange="" onratechange="" onemptied="" preload="auto" onloadeddata="" onloadedmetadata="//create something that does something with song metadata" onstalled="" onduration="" onerror='<script> alert("there is an error with the audio and your computer")</script>' oncanplaythrough="" onpause="//create javascript function that display songs image on pause with a play button." onplaying="// create an audio visualizer" onwaiting="//hide the audio player" onseeking="" ontimeupdate="" onsuspend="<?php //clearstatcache(); ?>" onabort="">
+                                        <data value="Mp3Audio">
+                                            <source id="songMpeg" class="sM" src="" type="audio/mpeg">
+                                        </data>    
+                                        <data value="WavAudio">
+                                            <source id="songWav" class="sWav" src="" type="audio/wav"> 
+                                        </data>
+                                        <data value="OggAudio">
+                                            <source id="songOgg" class="sO" src="" type="audio/ogg">
+                                        </data>
+                                    </audio>       
                             </div>
                         </span>
 
@@ -262,7 +250,7 @@ session_start();
 
                     </section>
 
-                    <footer>
+                    <footer oncopy="" oncut="" onpaste="" onkeydown="" onkeypress="" onkeyup="" onclick="" ondblclick="" onmousedown="" onmousemove="" onmouseout="" onmouseover="" onmouseup="" onwheel="" ondrag="" ondragend="" ondragenter="" ondragleave="" ondragover="" ondragstart="" ondrop="" onscroll="">
                         <div id="TFNP">
                             <span id="businessInfo">
                                 <ul id="BizTickerScroll" class="BizzTicker">
@@ -284,26 +272,29 @@ session_start();
                                 Membership (Not Ready Yet)
                             </H4>
         
-<?php require "./IsThisit/Footer/ActualForm.php"?>
+                                <?php require "./IsThisit/Footer/ActualForm.php"?>
                         </span>
 
                         <address>
                             <p>
                               Chris Maxwell<br>
-                              Land<br>
+                              Tyacdome <br>
+                              The Land of Dreams <br>
                               Planet Earth<br>
                               Milk Way
+
                             </p>
                           
                             <ul>
                               <li>Tel: 1(850)553-0300</li>
                               <li>Email: mageMaheli@yahoo.com</li>
+                              <li> </li>
                             </ul>
                           </address>
                           
-                          <p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
-<p>Caffeine's chemical formula is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
-<p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
+                            <p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
+                            <p>Caffeine's chemical formula is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+                            <p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
 
                     </footer>
         </body>
