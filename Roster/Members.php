@@ -71,63 +71,7 @@
             </header>
 
                 <nav id="Navigation">
-                    
-                    <table>
-
-                        <thead>
-
-                        </thead>
-
-                        <tbody>
-                        
-                            <tr>
-                            
-                            <!-- when writing a file path use ./ to locate a file in the same folder that you are writing the file in.  -->
-                            
-                            <!-- when using ../ you will find a file from the folder out of the folder you are in to the one above it. -->
-
-                                <td>
-                                    <a href="../index.html" target="_top"> Main </a>
-                                </td>
-
-                                <td>
-                                    <a href="Members.html" target="_self"> Roster </a>
-                                </td>
-
-                                <td>
-                                    <a href="../Radio/realtime.html" target="_self"> Radio </a>
-                                </td>
-
-                                <td>
-                                    <a href="../News/NewsTF.html" target="_parent"> News </a>
-                                </td>
-
-                                <td>
-                                    <a href="../Blog_Vlog_Podcast/HiddenDreamsVillage.html" target="_self"> Blog/Vlog </a>
-                                </td>
-
-                                <td>
-                                    <a href="../Competition/Competition.html" target="_blank"> Competition </a>
-                                </td>
-
-                                <td>
-                                    <a href="../Games/Section.html" target="_blank"> Games </a>
-                                </td>
-
-                                <td>
-                                    <a href="../Community/Login.html" target="_blank"> Community </a>
-                                </td>
-
-                                <td>
-                                    <a href="../Store/tycadome.html" target="_parent"> Store </a>
-                                </td>
-
-                            </tr>
-                        
-                        </tbody>
-
-                    </table>
-
+                    <?php require './IsThisit/Navigation/MainNavigationBar.php';?>
                 </nav>
 
 <!-- 
@@ -164,15 +108,9 @@ Uniorm Resource Identifier means URI
         <h1>
         Tsunami News, World News.
         </h1>
-        <ul id="NewsTickerScroll" class="NewsTicker">
-            <li>
-                <a href="www.twitter.com/mishuba"> Breaking News </a> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis culpa molestias suscipit saepe at repudiandae quas doloremque voluptatibus ipsam dolor sed odit, incidunt delectus vel assumenda laboriosam ratione officia architecto.
-            </li>
-            <li>
-                <a href="www.twitter.com/mishub"> Breaking Tsunami SHit News </a> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis culpa molestias suscipit saepe at repudiandae quas doloremque voluptatibus ipsam dolor sed odit, incidunt delectus vel assumenda laboriosam ratione officia architecto.
-            </li>
-        </ul>
-
+            <ul id="NewsTickerScroll" class="NewsTicker">
+                    <?php require './IsThisit/NewsLive/NewsUpdates.php';?>
+            </ul>
     </span>
 
 </section>
@@ -181,16 +119,9 @@ Uniorm Resource Identifier means URI
                     <section id="TsunamiFlowInformation">
 
                         <span id="TFBio">
-                            
-                            <h>
-                                Tsunami Flow Bio
-                            </h>
-
-                                <p>
-                                    paragraph one contents.
-                                </p>
-                        
+                            <?php require './IsThisit/CommunityLive/Community.php'?>                          
                         </span>
+
 
                         <span id="MissionStatement">
                         
@@ -210,78 +141,48 @@ Uniorm Resource Identifier means URI
                     <section id="TsunamiFlowStyle"> 
 
                         <span id="SomethingList">
-
-                            <p>
-                                Something List
-                            </p>
-                                    <ul>
-                                        <li>
-                                            Show this.
-                                        </li>
-
-                                        <li>
-                                            Show this two.
-                                        </li>
-
-                                        <li>
-                                            How about this one.
-                                        </li>
-                                    </ul>
-
+                            <div id="musicPlaylist" class="musicPl">
+                                <?php require "./IsThisit/BottomBar/MusicPlaylist.php";?>
+                                    <audio id="currentMusic" class="currentM" atl="booooo" onloadstart="" onprogress="" controls onplay="" ondurationchange="" onratechange="" onemptied="" preload="auto" onloadeddata="" onloadedmetadata="//create something that does something with song metadata" onstalled="" onduration="" onerror='<script> alert("there is an error with the audio and your computer")</script>' oncanplaythrough="" onpause="//create javascript function that display songs image on pause with a play button." onplaying="// create an audio visualizer" onwaiting="//hide the audio player" onseeking="" ontimeupdate="" onsuspend="<?php //clearstatcache(); ?>" onabort="">
+                                        <data value="Mp3Audio">
+                                            <source id="songMpeg" class="sM" src="" type="audio/mpeg">
+                                        </data>    
+                                        <data value="WavAudio">
+                                            <source id="songWav" class="sWav" src="" type="audio/wav"> 
+                                        </data>
+                                        <data value="OggAudio">
+                                            <source id="songOgg" class="sO" src="" type="audio/ogg">
+                                        </data>
+                                    </audio>       
+                            </div>
                         </span>
 
                         <span id="TheList">
+                            <?php require './IsThisIt/BottomBar/TheList.php';?>
+                        </span>
 
-                            <p>
-                                The List
-                            </p>
-
-                                    <ol>
-                                        <li>
-                                            Got a million haters
-                                        </li>
-
-                                        <li>
-                                            Got a million bars
-                                        </li>
-
-                                        <li>
-                                            Got a million ideas
-                                        </li>
-            
-                                    </ol>
-
+                        <span id="donation">
+                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                <input type="hidden" name="cmd" value="_s-xclick">
+                                <input type="hidden" name="hosted_button_id" value="3LQGL334FUKLW">
+                                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - 
+                                                    The safer, easier way to pay online!">
+                                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                            </form>
                         </span>
 
                     </section>
 
-
-<!-- Store front begins here. -->
+<!-- mini store/items on sale Store front begins here. -->
 
                     <section id="MainSection">
 
                         <nav> 
                             Navigation Bar
                                      <BR>
-                                        <a href="http://www.mishuba.live"> Entertainers </a>
+                                <?php require '../IsThisit/Navigation/RosterNavigation.php' ?>
                             
-                                        <a href="/Roster/Members.html"> Competitors </a>
-                            
-                                        <a href="/Radio/realtime.html"> Corporation </a>
-                            
-                                        <a href="/News/MainPage.html"> Coaches </a>
-                            
-                                        <a href="/Blog_Vlog/MainPage.html"> Managers </a>
-                            
-                                        <a href="/Competition/MainPage.html"> Agents </a>
-                            
-                                        <a href="/Games/Section.html"> Engineer </a>
-                            
-                                        <a href="/Community/Login.html"> Technicians </a>
-                            
-                                        <a href="/Store/MainPage.html"> Staff </a>
-                            
-                                     </nav>
+                        </nav>
 
             <!-- input store banner here. -->
                         <div id="IntroVideo"> 

@@ -2,7 +2,7 @@
 
 echo ("             
 <table> <thead> </thead> <tbody> <tr> <td>
-<a href='index.html' target='_top' onmouseover='' onmouseout='' onmousedown='' onmouseup='' onclick='' ondblclick=''> Main </a>
+<a href='index.php' target='_top' onmouseover='' onmouseout='' onmousedown='' onmouseup='' onclick='' ondblclick=''> Main </a>
 </td> <td>
 <a href='./Roster/Members.html' target='_self'> Roster </a>
 </td> <td>

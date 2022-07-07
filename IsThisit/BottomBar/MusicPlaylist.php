@@ -1,7 +1,7 @@
 <?php
 //the basics
 $MFName = ("C:/Repository/Tech/Software Programming and Coding/Website/Tycadome");
-$MFNameTwo = glob("C:/Repository/Tech/Software Programming and Coding/Website/Tycadome/*.{mp3,webm,ogg,wav}", GLOB_BRACE);
+$MFNameTwo = ("C:/Repository/Tech/Software Programming and Coding/Website/Tycadome");
 $musicPlaylist = array();
 $SNPlaylist = array();
 $musicPlaylistTwo = array();

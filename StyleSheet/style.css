@@ -10,6 +10,7 @@ body {
           }
 
 header {
+
     top: 0;
         left: 0;
             position: absolute;
@@ -18,7 +19,7 @@ header {
                         float:inline-end;
                             clear: none;
                                 overflow: hidden;
-                                    background:whitesmoke;
+                                    background: cornflowerblue;
         }
 
 #Navigation {
@@ -30,7 +31,7 @@ header {
                         float:none;
                             clear:none;
                                 overflow:hidden;
-                                    background: white;
+                                    background:black;
 }
 
 #News {
@@ -42,7 +43,7 @@ header {
                         float: inline-start;
                             clear: none;
                                 overflow: inherit;
-                                    background:blue;
+                                    background: rgb(10, 99, 10);
                                         text-align: center;                            
                             text-align: center;
                                         text-align: center;                            
@@ -59,7 +60,7 @@ header {
                         float: inline-start;
                             clear: none;
                                 overflow: auto;
-                                    background:red;
+                                    background:rgb(108, 10, 10);
 }
 
 #TsunamiFlowInformation {
@@ -71,7 +72,7 @@ header {
                         float:inline-start;
                             clear:none;
                                 overflow:inherit;
-                                    background:green;
+                                    background: rgb(10, 99, 10);
 }
 
 #TsunamiFlowStyle {
@@ -81,7 +82,7 @@ header {
                 left: 0;
                     bottom:0%;
                                 overflow:scroll;
-                                    background:rgb(255, 255, 255);
+                                    background:black;
                   }
 
 footer {
