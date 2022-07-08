@@ -38,8 +38,9 @@ session_start();
             <link rel="stylesheet" href="StyleSheet/style.css">
             <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-            <script src="JavaScript/jquery.js" defer></script>
-            <script src="JavaScript/script.js" defer></script>
+            <script src="JavaScript/Extras/jquery.js" defer></script>
+            <script src="JavaScript/Necessary/script.js" defer></script>
+            <script src="JavaScript/Necessary/mainFunctions.js" defer></script>
 
             <noscript> </noscript>
 
@@ -135,15 +136,15 @@ session_start();
                                 <?php require "./IsThisit/BottomBar/MusicPlaylist.php";?>
                                     <audio id="currentMusic" class="currentM" crossorigin controls download="You Did It" atl="booooo" onloadstart="" onprogress="" onplay="" ondurationchange="" onratechange="" onemptied="" preload="auto" onloadeddata="" onloadedmetadata="//create something that does something with song metadata" onstalled="" onduration="" onerror='<script> alert("there is an error with the audio and your computer")</script>' oncanplaythrough="" onpause="//create javascript function that display songs image on pause with a play button." onplaying="// create an audio visualizer" onwaiting="//hide the audio player" onseeking="" ontimeupdate="" onsuspend="<?php //clearstatcache(); ?>" onabort="">
                                         <data value="Mp3Audio">
-                                            <source id="songMpeg" class="sM" src="" type="audio/mpeg">
+                                            <source id="songMpeg" class="sM" src="./Music/Try To Stop Me Radio Edit.mp3" type="audio/mpeg">
                                             <track src="./WebVTT/Test.vtt" kind="subtitles" srclang="en" label="">
                                         </data>    
                                         <data value="WavAudio">
-                                            <source id="songWav" class="sWav" src="" type="audio/wav"> 
+                                            <source id="songWav" class="sWav" src="./Music/WAV/" type="audio/wav"> 
                                             <track src="./WebVTT/Test.vtt" kind="subtitles" srclang="en" label="">
                                         </data>
                                         <data value="OggAudio">
-                                            <source id="songOgg" class="sO" src="" type="audio/ogg">
+                                            <source id="songOgg" class="sO" src="./Music/OGG/" type="audio/ogg">
                                             <track src="./WebVTT/Test.vtt" kind="subtitles" srclang="en" label="">
                                         </data>
                                     </audio>       

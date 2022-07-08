@@ -33,6 +33,7 @@ function pauseTrack() {
 }
 
 function nextTrack() {
+    
     if (trackindex < songList.length - 1) {
         trackindex += 1;
     } else trackindex = 0;

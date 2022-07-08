@@ -250,9 +250,9 @@ footer {
         }
 #TheList {
     position: absolute;
-    left:25%;
+    left:35%;
     bottom: 0%;
-    width:52.5%;
+    width:40%;
     height: 90%;
     border: 1px solid black;
     margin: 0px;
@@ -297,12 +297,10 @@ footer {
         }
 
 
-#musicPlayer {
+#musicPlaylist {
                     position:absolute;
                     bottom:0%;
                     left:0%;
-                    height: 100%;
-                    width: 30%;
                     margin: 1%;
                     padding: 1%;
                     border: 1% solid #666;
