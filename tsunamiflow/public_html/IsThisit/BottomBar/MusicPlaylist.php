@@ -1,7 +1,7 @@
 <?php
 //the basics
-$MFName = ("C:/Repository/Tech/Software Programming and Coding/Website/Music/MP3/");
-$MFNameTwo = ("C:/Repository/Tech/Software Programming and Coding/Website/Music/WAV/");
+$MFName = ("../../Music/MP3/");
+$MFNameTwo = ("../../Music/WAV/");
 $musicPlaylist = array();
 $SNPlaylist = array();
 $musicPlaylistTwo = array();
