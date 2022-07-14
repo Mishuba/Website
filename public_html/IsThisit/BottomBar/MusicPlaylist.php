@@ -1,12 +1,18 @@
 <?php
 //the basics
-$MFName = ("C:/Repository/Tech/Software Programming and Coding/Website/Tycadome");
-$MFNameTwo = ("C:/Repository/Tech/Software Programming and Coding/Website/Tycadome");
+$MFName = ("C:/Repository/Tech/Software Programming and Coding/Website/Music/MP3/");
+$MFNameTwo = ("C:/Repository/Tech/Software Programming and Coding/Website/Music/WAV/");
 $musicPlaylist = array();
 $SNPlaylist = array();
 $musicPlaylistTwo = array();
 $SNPlaylistTwo = array();
 $changeSong = 0;
+
+$musicDir= json_encode($MFName);
+
+$musicArray = json_encode($musicPlaylist);
+
+$musicNames = json_encode($SNPlaylist);
 
 //working now
 $checkMF = file_exists($MFName);
@@ -225,4 +231,6 @@ unlink(); // Deletes a file
 
 
 // fopen(filename, mode(use r, r+, w, w+, a, a+, x, x+, c, c+), include_path, context)
+
+header('Content-Type: application/json');
 ?>

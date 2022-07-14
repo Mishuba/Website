@@ -2,14 +2,14 @@
 
 //members database (mysql version Object-Oriented)
 
-$servername = "salt.db.elephantsql.com";
-$username = "tsgyrobj";
-$password = "T7INBVPC_fVvuf8VQ5UQSizKhFDHYLyx";
+$MemberServerName = "salt.db.elephantsql.com";
+$MembersUserName = "tsgyrobj";
+$MembersPassword = "T7INBVPC_fVvuf8VQ5UQSizKhFDHYLyx";
 
-$conn = new mysqli($servername, $username, $password);
+$MembersConn = new mysqli($MemberServerName, $MembersUserName, $MembersPassword);
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect-error);
+if ($MembersConn->connect_error) {
+    die("Connection failed: " . $MembersConn->connect-error);
 } else {
     print("Connected Successfully");
 }
@@ -17,15 +17,13 @@ if ($conn->connect_error) {
 //database creation
 $membersCreationDB = "CREATE DATABASE TycadomeMembersDB";
 
-    if ($conn->query($membersCreationDB) === TRUE) {
+    if ($MembersConn->query($membersCreationDB) === TRUE) {
         print("Database created Successfully");
     } else {
-        print("Error creating database: " . $conn->error);
+        print("Error creating database: " . $MembersConn->error);
     }
 
-$conn->close();
-
-
+$MembersConn->close();
 
 //Subscribers (using mysql version Procedural)
 
@@ -106,6 +104,29 @@ $conn3 = null;
 //News Database Base
 
 //Blog Database
+$BlogServerName = "fanny.db.elephantsql.com";
+$BlogUserName = "fgfkcsqm";
+$BlogPassword = "vFeU7YtUiqoIG-h-kzv-nuISEhVL1N7L";
+
+    $BlogConn = new mysqli($BlogServerName, $BlogUserName, $BlogPassword);
+
+        if ($BlogConn->connect_error) {
+            die("Connection failed: " . $BlogConn->connect_error);
+        } else {
+            echo "Connected successfully";
+        }
+
+        $blogCreationDB = "CREATE DATABASE TycadomeBlogDB";
+
+        if ($BlogConn->query($membersCreationDB) === TRUE) {
+            print("Database created Successfully");
+        } else {
+            print("Error creating database: " . $BlogConn->error);
+        }
+    
+    $BlogConn->close();
+        
+
 
 //Vlog Database
 
