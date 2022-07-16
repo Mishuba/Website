@@ -137,32 +137,7 @@ session_start();
 
                         <span id="SomethingList">
                             <div id="musicPlaylist" class="musicPl">
-                                <audio id="currentMusic" class="currentM" controls atl="booooo" onloadstart="" onprogress="" onplay="" ondurationchange="" onratechange="" onemptied="" preload="" onloadeddata="" onloadedmetadata="//create something that does something with song metadata" onstalled="" onduration="" onerror="" oncanplaythrough="" onpause="//create javascript function that display songs image on pause with a play button." onplaying="// create an audio visualizer" onwaiting="//hide the audio player" onseeking="" ontimeupdate="" onsuspend="" onabort="">
-                                    <data value="Mp3Audio">
-                                        <source id="songMpeg" class="sM" src="./Music/MP3/I'm Ready Radio Edit.mp3" type="audio/mpeg">
-                                        <track src="./WebVTT/Test.vtt" kind="subtitles" srclang="en" label="mp3Music">
-                                    </data>  
-                                    <!--  
-                                    <data value="WavAudio">
-                                        <source id="songWav" class="sWav" src="" type="audio/wav"> 
-                                        <track src="./WebVTT/Test.vtt" kind="subtitles" srclang="en" label="">
-                                    </data>
-                                    <data value="OggAudio">
-                                        <source id="songOgg" class="sO" src="" type="audio/ogg">
-                                        <track src="./WebVTT/Test.vtt" kind="subtitles" srclang="en" label="">
-                                    </data>
-                                    -->
-
-                                    <script> 
-                                        fetch('MusicPlaylist.php')
-                                            .then(function(response) {
-                                                return response.json();
-                                            })
-                                            .then(function(data) {
-                                                alert("working I guess");
-                                            })
-                                </script>
-                                </audio>     
+                                <?php require './IsThisit/BottomBar/MusicPlaylist.php';?>
                             </div>
                         </span>
 

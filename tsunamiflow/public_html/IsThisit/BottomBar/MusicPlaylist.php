@@ -1,87 +1,39 @@
 <?php
 //the basics
-$MFName = ("../../Music/MP3/");
-$MFNameTwo = ("../../Music/WAV/");
-$musicPlaylist = array();
-$SNPlaylist = array();
-$musicPlaylistTwo = array();
-$SNPlaylistTwo = array();
 $changeSong = 0;
 
-$musicDir= json_encode($MFName);
-
-$musicArray = json_encode($musicPlaylist);
-
-$musicNames = json_encode($SNPlaylist);
-
-//working now
-$checkMF = file_exists($MFName);
-    $orNah = is_dir($MFName);
-        $musicFolder = dir($MFName);
-            $openMF = opendir($MFName);
-                $DotsSongArray = scandir($MFName);
-
-$checkTwoMF = file_exists($MFNameTwo);
-    $orNahTwo = is_dir($MFNameTwo);
-        $musicFolderTwo = dir($MFNameTwo);
-            $openMFTwo = opendir($MFNameTwo);
-                $DotsSongArrayTwo = scandir($MFNameTwo);
-
-//name this step
-$Song = array_diff($DotsSongArray, array('.','..'));
-$SongAtl = array_diff($DotsSongArrayTwo, array('.','..'));
-
-$SongNames = array_values($Song); 
-$SongNamesAtl = array_values($SongAtl);
-
-
-//arrays
-for ($changeSong; $changeSong <= count($Song); $changeSong++) 
-    {
-        array_push($musicPlaylist, $Song);
-    }
-
-for ($changeSong; $changeSong <= count($SongAtl); $changeSong++) 
-    {
-        array_push($musicPlaylistTwo, $SongAtl);
-    }
-
-for ($changeSong; $changeSong <= count($SongNames); $changeSong++) 
-    {
-        array_push($SNPlaylist, $SongNames);
-    }
-
-for ($changeSong; $changeSong <= count($SongNamesAtl); $changeSong++) 
-    {
-        array_push($SNPlaylistTwo, $SongNamesAtl);
-    }
-
-//global version
-
-
-//Important
-$nowPlayingMusic = reset($Song);
-$lastSong = end($Song);
-$nowPlayingMusicTwo = reset($SongAtl);
-$lastSongTwo = end($SongAtl);
-
-$beginningPlaylist = reset($musicPlaylist);
-$EndOfPlaylist = end($musicPlaylist);
-$beginningPlaylistTwo = reset($musicPlaylistTwo);
-$EndOfPlaylistTwo = end($musicPlaylistTwo);
-
-$SongOne = reset($SongNames);
-$finalSong = end($SongNames);
-$SongUno = reset($SongNamesAtl);
-$SongReally = end($SongNamesAtl);
-
-$startOfPlaylist = reset($SNPlaylist);
-$EndOfPlaylist = end($SNPlaylist);
-$startOfPlaylistTwo = reset($SNPlaylistTwo);
-$EndOfPlaylistTwo = end($SNPlaylistTwo);
-
-
-//$currentSong = array_walk($musicPlaylist, playMusic());
+$musicPath = ("../../Music/Mp3music");
+$MFName = realpath($musicPath);
+    $checkMF = file_exists($MFName);
+        $Mp3music = glob($MFName);
+            $musicDir= json_encode($Mp3music); /// try this json_encode(realpath($Mp3music));
+                    $orNah = is_dir($MFName);
+                        $musicFolder = dir($MFName);
+                            $openMF = opendir($musicFolder);
+                                    $Song = array_diff($Mp3music, array(".", ".."));
+                                        $musicSongs =json_encode($Song);
+                                            $nowPlayingMusic = reset($Song);
+                                            $lastSong = end($Song);
+                                                $SongNames = array_values($Song); 
+                                                    $musicNS = json_encode($SongNames);
+                                                        $musicPlaylist = array();
+                                                            $musicArray = json_encode($musicPlaylist);
+                                                                $beginningPlaylist = reset($musicPlaylist);
+                                                                $EndOfPlaylist = end($musicPlaylist);
+                                                                    for ($changeSong; $changeSong <= count($Song); $changeSong++) 
+                                                                    {
+                                                                        array_push($musicPlaylist, $Song);
+                                                                    }
+                                                                        $SongOne = reset($SongNames);
+                                                                        $finalSong = end($SongNames);
+                                                                            $SNPlaylist = array();
+                                                                                for ($changeSong; $changeSong <= count($SongNames); $changeSong++) 
+                                                                                {
+                                                                                    array_push($SNPlaylist, $SongNames);
+                                                                                }
+                                                                                    $musicNames = json_encode($SNPlaylist);
+                                                                                        $startOfPlaylist = reset($SNPlaylist);
+                                                                                        $EndOfPlaylist = end($SNPlaylist);
 
 //start the audio
         function playMusic(){
@@ -160,8 +112,60 @@ $EndOfPlaylistTwo = end($SNPlaylistTwo);
                 return $musicPlaylist[$changeSong];
             }
 
+?>
 
-/*
+<script>
+var trackindex = 0;
+
+var TFmusicF = json_encode(<?php echo('$musicDir')?>); // or use this one first
+    var TFmusicList =  json_encode(<?php echo('musicSongs')?>); // use this one or 
+        var TFmusicNames =   json_encode(<?php echo('$musicNS')?>);
+            var TFmusicArr =  json_encode(<?php echo('$musicArray')?>);
+                var TFmusic =  json_encode(<?php echo('$musicNames')?>);
+
+var currentSong = document.getElementById("currentMusic").src
+
+function playTFmusic() {
+    for (trackindex, trackindex < TFmusicF.length, trackindex++) {
+    currentSong.src.path=TFmusicF[trackindex].path;
+    currentsong.play();
+    currentsong.addEventListener("ended", ""); //input remove song from audio file
+    }
+}
+
+function nextTFmusic() {
+
+}
+
+function pastTFmusic() {
+
+}
+
+function randomTFmusic() {
+
+}
+
+function pauseTFmusic() {
+
+}
+</script>
+
+<audio id="currentMusic" class="currentM" controls atl="booooo" onloadstart="" onprogress="" onplay="" ondurationchange="" onratechange="" onemptied="" preload="" onloadeddata="" onloadedmetadata="//create something that does something with song metadata" onstalled="" onduration="" onerror="" oncanplaythrough="" onpause="//create javascript function that display songs image on pause with a play button." onplaying="// create an audio visualizer" onwaiting="//hide the audio player" onseeking="" ontimeupdate="" onsuspend="" onabort="">
+    <data value="Mp3Audio">
+        <source id="songMpeg" class="sM" src="" type="audio/mpeg">
+        <track src="./WebVTT/Test.vtt" kind="subtitles" srclang="en" label="mp3Music">
+    </data> 
+    <data value="WavAudio">
+        <source id="songWav" class="sWav" src="" type="audio/wav"> <!-- create function that will make the wav file from the mp3 file incase the user doesn't allow mp3 files.  If the file is not found in the wav files just go to a random file in the list. -->
+        <track src="./WebVTT/Test.vtt" kind="subtitles" srclang="en" label="">
+    </data>
+    <data value="OggAudio">
+        <source id="songOgg" class="sO" src="" type="audio/ogg"> <!-- create function that will make the ogg file from the wav file incase the user doesn't allow mp3 or wav files.  If the file is not found in the ogg files just go to a random file in the list. -->
+        <track src="./WebVTT/Test.vtt" kind="subtitles" srclang="en" label="">
+    </data>
+</audio>  
+
+<!-- everything inside of this comment is for php.
 //filesystem variables ([{I am going to test all of these below with firstsong or $Song or $beginningPlaylist}])
 basename(); //returns the filename component of a path
 
@@ -228,9 +232,6 @@ umask(); // Changes file permissions for files
 unlink(); // Deletes a file 
 */
 
-
-
 // fopen(filename, mode(use r, r+, w, w+, a, a+, x, x+, c, c+), include_path, context)
-
-header('Content-Type: application/json');
-?>
+-->
+            
