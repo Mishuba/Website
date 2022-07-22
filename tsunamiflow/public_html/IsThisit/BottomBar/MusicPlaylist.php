@@ -115,22 +115,88 @@ $MFName = realpath($musicPath);
 ?>
 
 <script>
+
+// learn more about ajax to finish the music player. This is the next and hopefully final step.
+
 var trackindex = 0;
+var currentSong = document.getElementById("currentMusic");
 
-var TFmusicF = json_encode(<?php echo('$musicDir')?>); // or use this one first
-    var TFmusicList =  json_encode(<?php echo('musicSongs')?>); // use this one or 
-        var TFmusicNames =   json_encode(<?php echo('$musicNS')?>);
-            var TFmusicArr =  json_encode(<?php echo('$musicArray')?>);
-                var TFmusic =  json_encode(<?php echo('$musicNames')?>);
+function startMusicPlease() {
+    var musicTF = new XMLHttpRequest();
+        musicTF.onload = function() {
+            var workpleaseman = JSON.parse(this.responseText);  
+                        musicTF.open("POST", "MusicPlaylist.php", true);
+                        musicTF.setRequestHeader("content",)
+                            var learningTFmusic = JSON.parse(<?php echo($musicSongs)?>);
+                                for (trackindex; trackindex < learningTFmusic.length; trackindex++) {
+                                    currentSong.src($learningTFmusic[trackindex]);
+                                    currentsong.play();
+                                        if (/*press pause*/) {
+                                            currentsong.pause();
+                                            currentSong.src.remove()
+                                        } else if (/*press skip*/) {
+                                            currentsong.pause();
+                                            currentSong.src.remove()
+                                            currentsong.src(learningTFmusic[trackindex++]);
+                                            currentsong.play();
+                                            currentsong.addEventListener("ended", "");
+                                            currentsong.src.remove()
+                                        } else  if (/*press backward*/) {
+                                            currentsong.pause();
+                                            currentSong.src.remove()
+                                            currentsong.src(learningTFmusic[trackindex--]);
+                                            currentsong.play();
+                                            currentsong.addEventListener("ended", "");
+                                            currentsong.src.remove()
+                                        } else if (/*press random*/) {
+                                            currentsong.pause();
+                                            currentSong.src.remove()
+                                            currentsong.src(learningTFmusic[Math.random(" " " " trackindex)]);
+                                            currentsong.play();
+                                            currentsong.addEventListener("ended", "");
+                                            currentsong.src.remove()
+                                        } else {
+                                            currentsong.addEventListener("ended", "");
+                                            currentSong.src.remove()
+                                        }
+                                }
+                        musicTF.send();
+                                    }    
+                                }
 
-var currentSong = document.getElementById("currentMusic").src
+/* I want to use this for loop for something. Not sure yet. possibly putting songs into an array and using the other for loop that is already completed to play and loop through the songs.
 
+for (const x in learningTFmusic) {
+    learningTFmusic[x]
+}
+*/
+
+
+/* 
+XMLHttpRequest Object Methods
+    Method                              Description
+    new XMLHttpRequest()                Creates a new XMLHttpRequest object
+    abort()                             Cancels the current request
+    getAllResponseHeaders()             Returns header information
+    getResponseHeader()                 Returns specific header information
+    open(method, url, async, user, psw) Specifices the request (GET or POST, url(file location), aysnc(true or false), optional user name, optional password)
+    send()                              Sends the request to the server Used for GET requests
+    send(string)                        Sends the request to the server Used for POST requests
+    setRequestHeader()                  Adds a label/value pair to the header to be sent
+
+
+XMLHttpRequest Object Properties
+    Property                            Description
+    onload                              Defines a function to be called when the request is recieved (loaded)
+    onreadystatechange                  Defines a function to be called when the readyState property changes
+    readyState                          Holds the staus of the XMLHttpRequest 0: request not initialized 1: server connection established 2: request received 3: processing request 4: request finished and response is ready
+    responseText                        Returns the response data as a string
+    responseXML                         Returns the response data as XML data
+    status                              Returns the status-number of a request 200: "OK" 403: "Forbidden" 404: "Not Found" 
+    statusText                          Returns the status-text(e.g. "OK" or "Not Found")
+
+*/
 function playTFmusic() {
-    for (trackindex, trackindex < TFmusicF.length, trackindex++) {
-    currentSong.src.path=TFmusicF[trackindex].path;
-    currentsong.play();
-    currentsong.addEventListener("ended", ""); //input remove song from audio file
-    }
 }
 
 function nextTFmusic() {
