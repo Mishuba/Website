@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Artist xmlns="">
+    <Genre category="Hip Hop">
+        <Name> Mishuba </Name>
+        <NumberOfAlbums> input number </NumberOfAlbums>
+        <NumberOfSingles> Input Number </NumberOfSingles>
+    </Genre>
+</Artist>
+
+<Artist Name="Kiwo">
+    <Genre category="Poetry">
+        <NumberOfBooks> input Number </NumberOfBooks>
+        <NumberOfPoems> input Number </NumberOfPoems>
+    </Genre>
+
+
+<!-- pre defined entity reference in XML
+    &lt;        <   less than
+    &gt;        >   greater than
+    &amp;       &   ampersand
+    &apos;      '   apostrophe
+    &quot;      "   quotation mark
+
+    lowercase
+    UPPERCASE
+    snake_case
+    PascalCase
+    camelCase
+
+    XML Naming Rules
+    Element name are case-sensitive
+    Element names must start with a letter or underscore
+    Element names cannot start with the letters xml (or XML, or Xml, etc etc)
+    Element names can contain letters digits, hyphens, underscores, and periods
+    Element names cannot contain spaces
+
+        Any name can be used, no words are reserved (except xml).
+
+        Think about uisng id's like so <Business id="001"> </Business>
+
+
+        
+<h:table>
+  <h:tr>
+    <h:td>Apples</h:td>
+    <h:td>Bananas</h:td>
+  </h:tr>
+</h:table>
+
+<f:table>
+  <f:name>African Coffee Table</f:name>
+  <f:width>80</f:width>
+  <f:length>120</f:length>
+</f:table> 
+-->
